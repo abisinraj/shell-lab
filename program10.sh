@@ -26,3 +26,9 @@ else
     # A palindrome reads the same forwards and backwards
     echo "Input string is a palindrome"
 fi
+
+# __________________________________________
+# | Enter the string:                      |
+# | madam                                  |
+# | Input string is a palindrome           |
+# |________________________________________|
