@@ -35,3 +35,11 @@ echo "${#vowels} vowels"
 
 # Print number of consonants found (length of the 'consonants' string)
 echo "${#consonants} consonants"
+
+# __________________________________________
+# | Enter the string                       |
+# | hello                                  |
+# | 5 characters                           |
+# | 2 vowels                               |
+# | 3 consonants                           |
+# |________________________________________|
