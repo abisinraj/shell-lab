@@ -38,3 +38,9 @@ done
 # Print the final calculated factorial
 # $ans holds the result (n!)
 echo "Total of factorial is $ans"
+
+# __________________________________________
+# | Factorial of the number?               |
+# | 5                                      |
+# | Total of factorial is 120              |
+# |________________________________________|
