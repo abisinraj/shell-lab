@@ -36,3 +36,10 @@ echo "area of the circle is: $area"
 # Similar to above - prints the circumference with variable expansion
 # $circum is replaced with the calculated circumference value
 echo "circumference of the circle is: $circum"
+
+# __________________________________________
+# | Enter the radius of the circle:        |
+# | 5                                      |
+# | area of the circle is: 78.5            |
+# | circumference of the circle is: 31.4   |
+# |________________________________________|
