@@ -25,13 +25,9 @@ do
     # In the first iteration, counter becomes 1
     counter=$(( counter + 1 ))
 
-    # Multiply the current 'ans' by the 'counter' value
-    # logic: ans = ans * counter
-    # Iteration 1: ans = 1 * 1 = 1
-    # Iteration 2: ans = 1 * 2 = 2
-    # Iteration 3: ans = 2 * 3 = 6
-    # ... and so on until counter equals 'fact'
-    ans=$(( ans * counter ))
+    # Multiply the current 'ans' by the 'counter' value using 'bc' to handle large numbers
+    # Standard shell arithmetic $((...)) overflows for factorials > 20!
+    ans=$(echo "$ans * $counter" | bc)
 
 done
 
