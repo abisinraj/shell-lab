@@ -34,3 +34,8 @@ elif [ $now -ge 06 -a $now -lt 14 ]; then
 else
    echo "Good evening"
 fi
+
+# __________________________________________
+# | Current time: 10:00:00                 |
+# | Good afternoon                         |
+# |________________________________________|
