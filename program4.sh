@@ -52,3 +52,10 @@ sd=$(echo "scale=6; $sd/3" | bc)
 
 # Display the result (technically this is variance, not SD)
 echo "Standard deviation is $sd"
+
+# __________________________________________
+# | Enter the three numbers separated by space:|
+# | 1 2 3                                      |
+# | Mean of 1, 2, 3 is 2.0000                  |
+# | Standard deviation is .666666              |
+# |____________________________________________|
