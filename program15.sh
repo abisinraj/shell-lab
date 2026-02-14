@@ -1,24 +1,45 @@
-# Prompt the user to enter a number
-echo "Enter a number:"
+# Clear the terminal screen for a clean output
+clear
 
-# Read the user's input into variable 'number'
-read number
+# Prompt the user to enter a text string
+echo "Enter the string "
 
-# Check if the number is even or odd using the modulo operator
-# $(expr $number % 2) performs arithmetic expansion using 'expr' command
-# % is the modulo operator (remainder of division)
-# If number % 2 equal to 0, it means the number is divisible by 2 (Even)
-# -eq is the integer equality comparison operator
-if [ $(expr $number % 2) -eq 0 ]; then
-     # If the remainder is 0, print that the number is even
-     echo "$number is even."
-else
-     # If the remainder is NOT 0 (i.e., 1), print that the number is odd
-     echo "$number is odd."
-fi
+# Read the user's input into variable 'word'
+read word
+
+# Extract all vowels from the string
+# echo $word pipes the string to sed (stream editor)
+# sed 's/[^aeiouAEIOU]//g':
+#   s/ -> substitute command
+#   [^aeiouAEIOU] -> Match any character that is NOT a vowel (caret ^ inside [] means negation)
+#   // -> Replace matched characters with nothing (delete them)
+#   g -> Global flag (replace all occurrences, not just the first one)
+# Result: Only the vowels remain in the string
+vowels=$(echo $word | sed 's/[^aeiouAEIOU]//g')
+
+# Extract all consonants from the string
+# Similar logic to above:
+#   [^bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ] -> Match any character that is NOT a consonant
+#   // -> Replace non-consonants with nothing
+# Result: Only the consonants remain
+consonants=$(echo $word | sed 's/[^bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]//g')
+
+# Display statistics using Shell Parameter Expansion
+# ${#variable} returns the length of the string stored in variable
+
+# Print total length of the original string
+echo "${#word} characters"
+
+# Print number of vowels found (length of the 'vowels' string)
+echo "${#vowels} vowels"
+
+# Print number of consonants found (length of the 'consonants' string)
+echo "${#consonants} consonants"
 
 # __________________________________________
-# | Enter a number:                        |
-# | 10                                     |
-# | 10 is even.                            |
+# | Enter the string                       |
+# | hello                                  |
+# | 5 characters                           |
+# | 2 vowels                               |
+# | 3 consonants                           |
 # |________________________________________|

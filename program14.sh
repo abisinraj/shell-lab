@@ -1,45 +1,41 @@
-# Clear the terminal screen for a clean output
+# Clear the terminal screen for a fresh display
 clear
 
-# Prompt the user to enter a text string
-echo "Enter the string "
+# Get the current time in HH:MM:SS format
+# 'date' command prints system date and time
+# +"%T" format specifier outputs time as HH:MM:SS (24-hour clock)
+# This is for display purposes only
+now=$(date +"%T")
 
-# Read the user's input into variable 'word'
-read word
+# Print the current time to the user
+echo "Current time: $now"
 
-# Extract all vowels from the string
-# echo $word pipes the string to sed (stream editor)
-# sed 's/[^aeiouAEIOU]//g':
-#   s/ -> substitute command
-#   [^aeiouAEIOU] -> Match any character that is NOT a vowel (caret ^ inside [] means negation)
-#   // -> Replace matched characters with nothing (delete them)
-#   g -> Global flag (replace all occurrences, not just the first one)
-# Result: Only the vowels remain in the string
-vowels=$(echo $word | sed 's/[^aeiouAEIOU]//g')
+# Get the current hour in 24-hour format (00-23)
+# +"%H" format specifier extracts just the hour
+# We need this for the logical comparisons below
+now=$(date +"%H")
 
-# Extract all consonants from the string
-# Similar logic to above:
-#   [^bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ] -> Match any character that is NOT a consonant
-#   // -> Replace non-consonants with nothing
-# Result: Only the consonants remain
-consonants=$(echo $word | sed 's/[^bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]//g')
+# Check time ranges to determine the appropriate greeting
+# -ge: greater than or equal to
+# -lt: less than
+# -a: logical AND operator
 
-# Display statistics using Shell Parameter Expansion
-# ${#variable} returns the length of the string stored in variable
+# If hour is between 02:00 (2 AM) and 06:00 (6 AM)
+# Note: This range seems unusually early for "Good morning" but follows the script logic
+if [ $now -ge 02 -a $now -lt 06 ]; then
+   echo "Good morning"
 
-# Print total length of the original string
-echo "${#word} characters"
+# If hour is between 06:00 (6 AM) and 14:00 (2 PM)
+elif [ $now -ge 06 -a $now -lt 14 ]; then
+   echo "Good afternoon"
 
-# Print number of vowels found (length of the 'vowels' string)
-echo "${#vowels} vowels"
-
-# Print number of consonants found (length of the 'consonants' string)
-echo "${#consonants} consonants"
+# For all other times (14:00 to 02:00 next day)
+# This covers late afternoon, evening, and late night
+else
+   echo "Good evening"
+fi
 
 # __________________________________________
-# | Enter the string                       |
-# | hello                                  |
-# | 5 characters                           |
-# | 2 vowels                               |
-# | 3 consonants                           |
+# | Current time: 10:00:00                 |
+# | Good afternoon                         |
 # |________________________________________|
