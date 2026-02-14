@@ -1,46 +1,34 @@
-# Prompt the user to enter a number to calculate its factorial
-echo "Factorial of the number?"
+# Clear the terminal screen for clean output
+clear
 
-# Read the user's input and store it in the variable 'fact'
-# 'fact' represents the number n for which we want to find n!
-read fact
+# Prompt the user to enter a string to check
+echo "Enter the string:"
 
-# Initialize 'ans' (answer) to 1
-# This variable will accumulate the product of numbers from 1 to n
-# We start with 1 because it's the identity element for multiplication
-ans=1
+# Read the user's input into variable 'string'
+read string
 
-# Initialize 'counter' to 0
-# This variable will act as our loop counter, incrementing from 0 to n
-counter=0
+# Reverse the string
+# echo $string pipes the variable content to the 'rev' command
+# 'rev' is a utility that reverses lines of a file or string
+# The result is stored in variable 'stringrev'
+# Example: if string="madam", stringrev="madam"
+#          if string="hello", stringrev="olleh"
+stringrev=$(echo $string | rev)
 
-# Start a while loop that continues as long as 'fact' is not equal to 'counter'
-# -ne is the "not equal" operator
-# The loop will run until 'counter' reaches 'fact'
-while [ $fact -ne $counter ]
-do
-
-    # Increment the counter by 1
-    # $(( ... )) is used for arithmetic expansion
-    # In the first iteration, counter becomes 1
-    counter=$(( counter + 1 ))
-
-    # Multiply the current 'ans' by the 'counter' value
-    # logic: ans = ans * counter
-    # Iteration 1: ans = 1 * 1 = 1
-    # Iteration 2: ans = 1 * 2 = 2
-    # Iteration 3: ans = 2 * 3 = 6
-    # ... and so on until counter equals 'fact'
-    ans=$(( ans * counter ))
-
-done
-
-# Print the final calculated factorial
-# $ans holds the result (n!)
-echo "Total of factorial is $ans"
+# Compare the original string with the reversed string
+# != is the string inequality operator
+# We check if they are NOT equal first
+if [ "$string" != "$stringrev" ]; then
+    # If they are different, it's not a palindrome
+    echo "String is not a palindrome"
+else
+    # If they are equal (the 'else' case), it is a palindrome
+    # A palindrome reads the same forwards and backwards
+    echo "Input string is a palindrome"
+fi
 
 # __________________________________________
-# | Factorial of the number?               |
-# | 5                                      |
-# | Total of factorial is 120              |
+# | Enter the string:                      |
+# | madam                                  |
+# | Input string is a palindrome           |
 # |________________________________________|
