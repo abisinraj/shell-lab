@@ -16,3 +16,9 @@ else
      # If the remainder is NOT 0 (i.e., 1), print that the number is odd
      echo "$number is odd."
 fi
+
+# __________________________________________
+# | Enter a number:                        |
+# | 10                                     |
+# | 10 is even.                            |
+# |________________________________________|
