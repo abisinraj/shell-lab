@@ -37,3 +37,9 @@ fi
 # $a, $b, $c, $Large are expanded to their values
 # Commas and spaces in the string are printed literally
 echo "Largest of $a, $b, $c is $Large"
+
+# __________________________________________
+# | Enter three numbers separated by space:|
+# | 10 25 15                               |
+# | Largest of 10, 25, 15 is 25            |
+# |________________________________________|
