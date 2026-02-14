@@ -42,3 +42,10 @@ else
     # If they are not equal, it is not an Armstrong number
     echo "Number is not Armstrong"
 fi
+
+# __________________________________________
+# | Program to check Armstrong number      |
+# | Enter the number:                      |
+# | 153                                    |
+# | Number is Armstrong                    |
+# |________________________________________|
