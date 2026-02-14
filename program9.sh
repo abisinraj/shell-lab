@@ -67,3 +67,10 @@ done
 
 # Print a final newline for clean formatting
 echo
+
+# __________________________________________
+# | Enter the limit:                       |
+# | 10                                     |
+# | Prime numbers are...                   |
+# | 2 3 5 7                                |
+# |________________________________________|
