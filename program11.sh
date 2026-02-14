@@ -33,10 +33,10 @@ done
 
 # Print the final calculated factorial
 # $ans holds the result (n!)
-echo "Total of factorial is $ans"
+echo "Factorial of $fact is $ans"
 
 # __________________________________________
 # | Factorial of the number?               |
 # | 5                                      |
-# | Total of factorial is 120              |
+# | Factorial of 5 is 120              |
 # |________________________________________|
