@@ -95,3 +95,20 @@ fi
 # done - marks the end of the while loop
 # If exit wasn't called, loop continues (goes back to while condition)
 done
+
+# __________________________________________
+# | MENU                                   |
+# | 1. Addition                            |
+# | 2. Subtraction                         |
+# | 3. Multiplication                      |
+# | 4. Division                            |
+# | Enter your choice                      |
+# | 1                                      |
+# | Enter first number:                    |
+# | 2                                      |
+# | Enter second number:                   |
+# | 3                                      |
+# | sum = 5                                |
+# | Do you want to continue (y/n)?         |
+# | n                                      |
+# |________________________________________|
