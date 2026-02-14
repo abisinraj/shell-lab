@@ -70,3 +70,14 @@ y=$z
 #   Iter 5: z=3+5=8, x=5, y=8
 #   Series: 0, 1, 1, 2, 3, 5, 8
 done
+
+# __________________________________________
+# | How many numbers of terms to be generated?|
+# | 5                                      |
+# | Fibonacci Series up to 5 terms:        |
+# | 0                                      |
+# | 1                                      |
+# | 1                                      |
+# | 2                                      |
+# | 3                                      |
+# |________________________________________|
