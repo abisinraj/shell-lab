@@ -72,7 +72,7 @@ case $ch in
 
 # Pattern *: Default case (wildcard matches anything)
 # Handles invalid input (not 1, 2, 3, or 4)
-*) echo "invalid choice";;
+*) echo "Invalid choice";;
 
 # esac - ends the case statement (case spelled backwards)
 esac
