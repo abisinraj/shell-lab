@@ -22,17 +22,16 @@ now=$(date +"%H")
 
 # If hour is between 02:00 (2 AM) and 06:00 (6 AM)
 # Note: This range seems unusually early for "Good morning" but follows the script logic
-if [ $now -ge 02 -a $now -lt 06 ]; then
-   echo "Good morning"
+if [ $now -ge 06 -a $now -le 12 ]
+then
+    echo "Good morning"
 
-# If hour is between 06:00 (6 AM) and 14:00 (2 PM)
-elif [ $now -ge 06 -a $now -lt 14 ]; then
-   echo "Good afternoon"
+elif [ $now -ge 12 -a $now -le 17 ]
+then
+    echo "Good afternoon"
 
-# For all other times (14:00 to 02:00 next day)
-# This covers late afternoon, evening, and late night
 else
-   echo "Good evening"
+    echo "Good evening"
 fi
 
 # __________________________________________
