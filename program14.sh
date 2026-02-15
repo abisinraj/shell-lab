@@ -25,15 +25,12 @@ now=$(date +"%H")
 if [ $now -ge 06 -a $now -le 12 ]
 then
     echo "Good morning"
-fi
 
-if [ $now -gt 12 -a $now -le 17 ]
+elif [ $now -gt 12 -a $now -le 17 ]
 then
     echo "Good afternoon"
-fi
 
-if [ $now -gt 17 -o $now -lt 06 ]
-then
+else
     echo "Good evening"
 fi
 
