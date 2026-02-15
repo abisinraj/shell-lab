@@ -12,7 +12,7 @@ n=$#
 # Check if any arguments were provided to avoid division by zero
 if [ $n -eq 0 ]; then
     echo "No numbers provided."
-    echo "Usage: $0 number1 number2 ..."
+    echo "Usage: sh $0 number1 number2 ..."
     exit 1
 fi
 
