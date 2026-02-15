@@ -1,0 +1,1068 @@
+
+#Author:    Rijila Nadh
+
+# Program :          1 .To calculate the area and circumference of the
+circle given the radius
+
+
+
+clear
+
+echo "Enter the radius of the circle"
+
+read r
+
+area=$(echo "3.14*$r*$r" | bc  )
+
+circum=$(echo "3.14*2*$r" | bc)
+
+echo "area of the circle is             " $area
+
+echo "circumference of the circle is    " $circum
+
+
+
+# Program :          2.menu driven calculator using case
+
+
+
+clear
+
+sum=0
+
+i="y"
+
+while [ $i = "y" ]
+
+do
+clear
+echo "MENU"
+echo "1.Addition"
+echo "2.Subtraction"
+echo "3.Multiplication"
+echo "4.Division"
+echo "Enter your choice"
+read ch
+echo "Enter first no."
+read n1
+echo "Enter second no."
+read n2
+case $ch in
+    1)sum=`expr $n1 + $n2`
+      echo "Sum ="$sum;;
+    2)sum=`expr $n1 - $n2`
+     echo "Sub = "$sum;;
+    3)sum=`expr $n1 \* $n2`
+     echo "Mul = "$sum;;
+    4)sum=`expr $n1 / $n2`
+     echo "Div = "$sum;;
+    *)echo "Invalid choice";;
+esac
+echo "Do u want to continue (y/n) ?"
+read i
+if [ $i != "y" ]
+then
+    exit
+fi
+done
+
+
+
+
+# Program :          3.Find greatest among three numbers
+
+
+
+echo "Enter three numbers seperated by space"
+
+read a b c
+
+Large=$a
+
+if [ $b -gt $Large ]
+
+then
+
+Large=$b
+fi
+
+if [ $c -gt $Large ]
+
+then
+
+Large=$c
+
+fi
+
+echo "Largest of $a,$b,$c is $Large
+
+
+# Program :          4.mean and standard deviation of three numbers
+
+
+
+echo "Enter the three numbers seperated by space:"
+
+
+
+read a b c
+
+
+
+sum=$(echo "$a+$b+$c" | bc )
+
+
+
+mean=$(echo "scale=4; $sum/3"  | bc )
+
+
+
+echo Mean of $a, $b, $c is=  $mean
+
+
+
+sd=$(echo "($a-$mean)*($a-$mean)" | bc )
+
+
+
+sd=$(echo "$sd+($b-$mean)*($b-$mean)" | bc )
+
+
+
+sd=$(echo "$sd+($c-$mean)*($c-$mean)" | bc )
+
+
+
+sd=$(echo "scale=6;$sd/3" | bc )
+
+
+
+echo Standard deviation is= $sd
+
+
+
+
+
+# Program :          5.Reverse of a number
+
+
+
+clear
+
+echo "Enter a number"
+
+read n
+
+sd=0
+
+rev=0
+
+
+
+while [ $n -gt 0 ]
+
+do
+
+    sd=$(( $n % 10 ))
+
+    rev=$(( $rev *\ 10 + $sd ))
+
+    n=$(( $n / 10 ))
+
+done
+
+
+
+echo "Reverse number of entered digit is $rev"
+
+
+
+
+
+
+
+
+
+# Program :          6.Fibonacci series
+
+clear
+
+  echo "How many number of terms to be generated ?"
+
+  read n
+
+  x=0
+
+  y=1
+
+  i=2
+
+  echo "Fibonacci Series up to $n terms :"
+
+  echo "$x"
+
+  echo "$y"
+
+  while [ $i -lt $n ]
+
+  do
+
+      i=`expr $i + 1 `
+
+      z=`expr $x + $y `
+
+      echo "$z"
+
+      x=$y
+
+      y=$z
+
+  done
+
+
+
+
+
+# Program :          7.Check for armstrong mumber
+
+
+
+echo "Program to check armstrong number"
+
+echo "Enter the number: "
+
+read n
+
+sum=0
+
+rev=0
+
+old=$n
+
+while [ $n -gt 0 ]
+
+do
+
+    sd=$(( $n % 10 ))
+
+    sum=$(( $sum+ $sd *\ $sd *\ $sd ))
+
+    n=$(( $n / 10 ))
+
+done
+
+if [ $old -eq $sum ]
+
+then
+
+   echo "Number is armstrong "
+
+else
+
+   echo "Number is not armstrong"
+
+fi
+
+
+
+
+
+
+
+# Program :          8.factorial of a number
+
+
+
+echo "Factorial of the number ?"
+
+read fact
+
+ans=1
+
+counter=0
+
+while [ $fact -ne $counter ]
+
+do
+
+        counter=`expr $counter + 1`
+
+        ans=`expr $ans \* $counter`
+
+done
+
+echo "Total of factorial is $ans"
+
+
+
+
+
+
+
+
+
+
+
+# Program :          9.prime numbers
+
+
+
+clear
+
+echo "Program to print prime numbers"
+
+echo "enter the limit"
+
+read n
+
+i=1
+
+echo "Prime numbers are..."
+
+while [ $i -le $n ]
+
+do
+
+      flag=0
+
+      j=2
+
+      while [ $j -lt $i ]
+
+      do
+
+      k=$((i%j))
+
+            if [ $k -eq 0 ]
+
+                 then
+
+                       flag=1
+
+            fi
+
+      j=$((j+1))
+
+        done
+
+      if [ $flag -eq 0 ]
+
+      then
+
+      echo -n " $i"
+
+      fi
+
+i=$((i+1))
+
+done
+
+echo
+
+
+
+
+
+
+
+# Program :          10.palindrom string
+
+
+
+clear
+
+echo 'Enter the string'
+
+read string
+
+stringrev=`echo $string|rev`
+
+if [ $string != $stringrev ]
+
+      then
+
+            echo "String is not palindrome"
+
+      else
+
+            echo "Input String is Palindrom"
+
+fi
+
+
+
+
+
+# Program :          11.words,lines in file
+
+clear
+
+read file
+
+echo "Contents of the file are"
+
+echo "##############"
+
+cat<$file
+
+echo "#############"
+
+l=`wc -l $file|cut -d " " -f 1`
+
+echo "Numer of Lines=$l"
+
+l=`wc -w $file|cut -d " " -f 1`
+
+echo "Numer of Words=$l"
+
+l=`wc -c $file|cut -d " " -f 1`
+
+echo "Numer of Characters=$l"
+
+
+
+
+
+# Program :          12 gross from DA,HRA
+
+
+
+clear
+
+echo "Enter the name of the employee"
+
+read name
+
+echo "Enter the Basic Pay of the employee"
+
+read BP
+
+echo "Enter the DA of the employee"
+
+read DA
+
+echo "Enter the HRA of the employee"
+
+read HRA
+
+Gross=$(echo "scale=2;$BP+($BP*$DA/100)+($BP*$HRA/100)" | bc )
+
+echo "Gross Salary of $name is Rs $Gross"
+
+
+
+
+
+# Program :          13 average through command line
+
+
+
+clear
+
+sum=0
+
+n=$#
+
+for i in $*
+
+do
+
+sum=`expr $sum + $i`
+
+done
+
+avg=$(echo "scale=2;$sum/$n" | bc )
+
+echo "Average of the numbers=$avg"
+
+
+
+
+
+
+
+# Program :          14 good morning,evening based on time
+
+
+
+clear
+
+now=$(date +"%T")
+
+echo "Current time : $now"
+
+now=$(date +"%H")
+
+
+
+if [ $now -ge 06 -a $now -le 12 ]
+
+      then
+
+            echo "Good morning"
+
+      elif [ $now -ge 12 -a $now -le 17 ]
+
+      then
+
+            echo "Good afternoon"
+
+      else
+
+            echo "Good evening"
+
+fi
+
+
+
+# Program :          15 test files
+
+clear
+
+if [ -e "$1" ]
+
+then
+
+      echo "$file exists."
+
+else
+
+      echo "$file does not exist."
+
+fi
+
+if [ -b "$1" ]
+
+then
+
+      echo "$FILE is block special"
+
+fi
+
+if [ -c "$1" ]
+
+then
+
+      echo "$FILE is character special"
+
+fi
+
+if [ -d "$1" ]
+
+then
+
+      echo "$FILE is a directory"
+
+fi
+
+if [ -f "$1" ]
+
+then
+
+      echo "$FILE is a regular file"
+
+fi
+
+if [ -g "$1" ]
+
+then
+
+      echo "$FILE is st group ID"
+
+fi
+
+if [ -r "$1" ]
+
+then
+
+      echo "$FILEs read permission is granted"
+
+fi
+
+if [ -s "$1" ]
+
+then
+
+      echo "$FILEs size is greater than zero"
+
+fi
+
+if [ -w "$1" ]
+
+then
+
+      echo "$FILEs write permission is granted"
+
+fi
+
+if [ -x "$1" ]
+
+then
+
+      echo "$FILEs execute permission is granted"
+
+fi
+
+
+
+
+
+
+
+# Program :          16 vowels and consonents
+
+
+
+clear
+
+echo "Enter the string "
+
+read word
+
+vowels=$(echo $word | sed 's/[^aeiouAEIOU]//g')
+
+consonants=$(echo $word | sed 's/
+[^bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]//g')
+
+echo "${#word} characters"
+
+echo "${#vowels} vowels"
+
+echo "${# consonants} consonants"
+
+
+
+
+
+# Program :          17 file for phone no insertion,deletion and display
+
+
+
+
+
+
+
+
+
+        #!/bin/sh
+
+        # phonemain.sh
+
+        # Name of address book
+
+         BOOK="address-book.txt"
+
+        exit=0
+
+
+
+        while [ $exit -ne 1 ]
+
+        do
+
+            echo "What operation do you want?"
+
+            echo "1:add,2:list,3:find,4:del,5:exit: "
+
+            read answer
+
+
+
+            if [ $answer = 1 ]
+
+            then
+
+                chmod 755 phoneadd.sh
+
+                ./phoneadd.sh
+
+            elif [ $answer = 2 ]
+
+            then
+
+                chmod 755 phonedisp.sh
+
+                ./phonedisp.sh
+
+            elif [ $answer = 3 ]
+
+            then
+
+                chmod 755 phonefind.sh
+
+                ./phonefind.sh
+
+            elif [ $answer = 4 ]
+
+            then
+
+                chmod 755 phonedel.sh
+
+                ./phonedel.sh
+
+            elif [ $answer = 5 ]
+
+            then
+
+                echo "Exit....."
+
+                exit=1
+
+            else
+
+                echo "I do not understand the command."
+
+            fi
+
+        done
+
+
+
+        exit 0
+
+  #!/bin/sh
+
+        # phoneadd.sh
+
+        # Name of address book
+
+        BOOK="address-book.txt"
+
+
+
+        # Ask the user for a name and assign to a variable
+
+        echo -n "Name of person: "
+
+        read name
+
+
+
+        # Ask the user for a phone number and assign to a variable
+
+        echo -n "Phone number: "
+
+        read phone
+
+
+
+        # Echo the answers and ask for confirmation
+
+        echo "Should I enter the values to the file (y/n):"
+
+        read answer
+
+        if [ $answer = "y" ]
+
+        then
+
+            # Write the values to the address book
+
+            echo "$name ; $phone" >>$BOOK
+
+            echo "Item added successfully....."
+
+      else
+
+            # Give the user a message
+
+            echo "$name ; $phone NOT written to $BOOK"
+
+        fi
+
+        exit 0
+
+
+
+#!/bin/sh
+
+       # phonefind.sh
+
+        BOOK="address-book.txt"
+
+
+
+        # Ask the user what to look for.
+
+        echo -n "What person or number are you seeking: "
+
+        read find
+
+
+
+        # Print the header before the answer
+
+        echo "Name ; Phone number"
+
+        if grep -w $find $BOOK
+
+      then
+
+            echo found
+
+      else
+
+            echo not found
+
+      fi
+
+
+
+#!/bin/sh
+
+
+
+        # phonedisp.sh
+
+        BOOK="address-book.txt"
+
+
+
+        # Display the format before the entries
+
+        echo "   SNo. ;   Name  ;  Phone Number"
+
+        nl --number-separator=":    " $BOOK
+
+
+
+
+
+
+
+#!/bin/sh
+
+        # phonedel.sh
+
+        BOOK="address-book.txt"
+
+
+
+        # Ask the user which line to delete
+
+        echo -n "Which line should I delete: "
+
+        read number
+
+
+
+        # Rename the file before deleting
+
+        mv $BOOK boo.txt
+
+
+
+        # Add line numbers and delete against that number
+
+        nl --number-separator=":" boo.txt | grep -v $number: | awk -F:
+'{print $2}' |  tee $BOOK
+
+
+
+
+
+# Program :          18 grading and marklist
+
+
+
+clear
+
+echo "Enter the name"
+
+read name
+
+echo "Enter the Roll No"
+
+read roll
+
+echo "Enter Marks for Subject 1"
+
+read m1
+
+echo "Enter Marks for Subject 2"
+
+read m2
+
+echo "Enter Marks for Subject 3"
+
+read m3
+
+echo "Enter Marks for Subject 4"
+
+read m4
+
+echo "Enter Marks for Subject 5"
+
+read m5
+
+total=$(echo "$m1+$m2+$m3+$m4+$m5" | bc)
+
+echo "Name = $name"
+
+echo "Total = $total"
+
+avg=$(echo "$total/5"  | bc )
+
+# or use avg=`echo \($total\) /5|bc`
+
+echo "Average = $avg"
+
+if [ $avg -ge 90 ]
+
+      then
+
+            echo "Grade = A"
+
+      elif [ $avg -ge 80 -a $avg -lt 90 ]
+
+      then
+
+            echo "Grade = B"
+
+        elif [ $avg -ge 60 -a $avg -lt 80 ]
+
+      then
+
+            echo "Grade = C"
+
+      elif [ $avg -ge 40 -a $avg -lt 60 ]
+
+      then
+
+            echo "Grade = D"
+
+      else
+
+            echo "Grade = E"
+
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Program :          19 sort array of numbers
+
+
+
+clear
+
+echo "Enter number of elements: "
+
+read n
+
+echo "Enter array elements: "
+
+i=0
+
+while [ $i -lt $n ]
+
+do
+
+      read a[$i]
+
+      i=$((i+1))
+
+done
+
+echo "Entered elements are... "
+
+i=0
+
+while [ $i -le $n ]
+
+do
+
+      echo ${a[$i]}
+
+      i=$((i+1))
+
+done
+
+for((i=0; i<n; i++))
+
+      do
+
+      for((j=$((i+1)); j<n; j++))
+
+            do
+
+            if [ ${a[$i]} -gt ${a[$j]} ]
+
+                 then
+
+                 temp=${a[$i]}
+
+                 a[$i]=${a[$j]}
+
+                 a[$j]=$temp
+
+            fi
+
+            done
+
+      done
+
+echo "Array after sorting: "
+
+for((i=0; i<n; i++))
+
+do
+
+      echo ${a[$i]}
+
+done
+
+# details.sh
+
+# Program :          20 details of the terminal
+
+# Author :          baiju
+
+# Date :            25/03/2017
+
+clear
+
+echo "Current date"
+
+now="$(date +'%d/%m/%Y')"
+
+echo "$now"
+
+echo "Current time"
+
+now=$(date +"%T")
+
+echo "$now"
+
+echo "Number of users"
+
+log=`who|wc -l`
+
+echo "$log"
+
+echo "Terminal name"
+
+x="$whoami"
+
+echo "$whoami"
+
+echo "Login date and time"
+
+last
