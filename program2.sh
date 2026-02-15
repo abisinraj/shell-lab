@@ -52,7 +52,7 @@ case $ch in
 # Performs integer arithmetic: n1 + n2
 1) sum=$((n1 + n2))
    # Print result with variable interpolation
-   echo "sum = $sum";;
+   echo "Sum = $sum";;
    # ;; terminates this case branch
 
 # Pattern 2: Subtraction
