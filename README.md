@@ -19,6 +19,7 @@ This repository contains a collection of shell scripts demonstrating various Lin
 | `program10.sh`| **File Statistics** | `wc` command, input redirection, file operations |
 | `program11.sh`| **Factorial Calculator** | Iterative multiplication, `bc` for large numbers |
 | `program12.sh`| **Gross Salary** | Percentage calculations, floating-point arithmetic |
+| `program13.sh`| **Average (CLI)** | Command-line arguments `$#`, loop, arithmetic |
 | `program14.sh`| **Time Greeting** | `date` command usage, time-based conditionals |
 | `program15.sh`| **Vowel/Consonant Counter** | String manipulation with `sed`, regex |
 | `program15  .sh`| **Even/Odd Check** | Modulo arithmetic, simple conditional check |
