@@ -40,6 +40,6 @@ echo "circumference of the circle is: $circum"
 # __________________________________________
 # | Enter the radius of the circle:        |
 # | 5                                      |
-# | area of the circle is: 78.5            |
-# | circumference of the circle is: 31.4   |
+# | Area of the circle is: 78.5            |
+# | Circumference of the circle is: 31.4   |
 # |________________________________________|
