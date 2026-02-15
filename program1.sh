@@ -31,7 +31,7 @@ circum=$(echo "3.14 * 2 * $r" | bc)
 # echo with variable interpolation
 # Syntax: echo "text $variable"
 # $area is expanded to its calculated value within the double-quoted string
-echo "area of the circle is: $area"
+echo "Area of the circle is: $area"
 
 # Similar to above - prints the circumference with variable expansion
 # $circum is replaced with the calculated circumference value
