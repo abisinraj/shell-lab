@@ -1,3 +1,6 @@
+# Heading: Program to Display Greeting
+# Aim: To display a greeting message based on system time
+
 # Clear the terminal screen for a fresh display
 clear
 
@@ -34,7 +37,8 @@ else
     echo "Good evening"
 fi
 
+# Output:
 # __________________________________________
-# | Current time: 10:00:00                 |
+# | Current time: 13:00:00                 |
 # | Good afternoon                         |
 # |________________________________________|
