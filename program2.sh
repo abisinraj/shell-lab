@@ -1,3 +1,6 @@
+# Heading: Program to perform Arithmetic Operations
+# Aim: To perform Arithmetic Operations using case statement
+
 # Variable initialization
 # Syntax: variable=value (no spaces around =)
 # Initialize sum to 0 - will store calculation results
@@ -96,6 +99,7 @@ fi
 # If exit wasn't called, loop continues (goes back to while condition)
 done
 
+# Output:
 # __________________________________________
 # | MENU                                   |
 # | 1. Addition                            |
@@ -108,7 +112,7 @@ done
 # | 2                                      |
 # | Enter second number:                   |
 # | 3                                      |
-# | sum = 5                                |
+# | Sum = 5                                |
 # | Do you want to continue (y/n)?         |
 # | n                                      |
 # |________________________________________|
