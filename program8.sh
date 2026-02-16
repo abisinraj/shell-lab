@@ -1,3 +1,6 @@
+# Heading: Program to check Armstrong Number
+# Aim: To check if a number is an Armstrong number
+
 # Echo command displays a message describing the program's purpose
 echo "Program to check Armstrong number"
 
@@ -43,6 +46,7 @@ else
     echo "Number is not Armstrong"
 fi
 
+# Output:
 # __________________________________________
 # | Program to check Armstrong number      |
 # | Enter the number:                      |
