@@ -1,3 +1,6 @@
+# Heading: Program to calculate Factorial
+# Aim: To calculate the factorial of a number
+
 # Prompt the user to enter a number to calculate its factorial
 echo "Factorial of the number?"
 
@@ -35,6 +38,7 @@ done
 # $ans holds the result (n!)
 echo "Factorial of $fact is $ans"
 
+# Output:
 # __________________________________________
 # | Factorial of the number?               |
 # | 5                                      |
