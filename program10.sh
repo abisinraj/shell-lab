@@ -1,3 +1,6 @@
+# Heading: Program to Count Lines, Words and Characters
+# Aim: To count lines, words and characters in a file
+
 # Clear the terminal screen for a clean output
 clear
 
@@ -38,6 +41,7 @@ echo "Number of lines = $lines"
 echo "Number of words = $words"
 echo "Number of characters = $characters"
 
+# Output:
 # __________________________________________
 # | Enter the filename: abc.txt            |
 # | Contents of the file are               |
