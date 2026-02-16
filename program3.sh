@@ -1,3 +1,6 @@
+# Heading: Program to find the Largest of Three Numbers
+# Aim: To find the largest of three numbers using user input
+
 # echo - Display prompt asking user for input
 # Instructs user to enter three numbers separated by spaces
 echo "Enter three numbers separated by space:"
@@ -38,6 +41,7 @@ fi
 # Commas and spaces in the string are printed literally
 echo "Largest of $a, $b, $c is $Large"
 
+# Output:
 # __________________________________________
 # | Enter three numbers separated by space:|
 # | 10 25 15                               |
