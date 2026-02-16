@@ -1,3 +1,6 @@
+# Heading: Program to generate Fibonacci Series
+# Aim: To generate Fibonacci series up to N terms
+
 # Clear terminal screen for clean output
 clear
 
@@ -71,6 +74,7 @@ y=$z
 #   Series: 0, 1, 1, 2, 3, 5, 8
 done
 
+# Output:
 # __________________________________________
 # | How many numbers of terms to be generated?|
 # | 5                                      |
