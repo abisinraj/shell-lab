@@ -1,3 +1,6 @@
+# Heading: Program to check Palindrome
+# Aim: To check if a given string is a palindrome
+
 # Clear the terminal screen for clean output
 clear
 
@@ -27,6 +30,7 @@ else
     echo "Input string is a palindrome"
 fi
 
+# Output:
 # __________________________________________
 # | Enter the string:                      |
 # | madam                                  |
