@@ -1,3 +1,6 @@
+# Heading: Program to Count Vowels and Consonants
+# Aim: To count vowels and consonants in a string
+
 # Clear the terminal screen for a clean output
 clear
 
@@ -36,6 +39,7 @@ echo "${#vowels} vowels"
 # Print number of consonants found (length of the 'consonants' string)
 echo "${#consonants} consonants"
 
+# Output:
 # __________________________________________
 # | Enter the string                       |
 # | hello                                  |
