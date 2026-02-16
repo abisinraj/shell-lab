@@ -1,3 +1,6 @@
+# Heading: Program to calculate Average
+# Aim: To calculate the average of numbers provided as arguments
+
 # Clear the terminal screen for a clean output
 clear
 
@@ -36,6 +39,7 @@ avg=$(echo "scale=2;$sum/$n" | bc)
 echo "Average of the numbers = $avg"
 
 
+# Output:
 # __________________________________________
 # | $ ./program13.sh 10 20 30              |
 # | Average of the numbers = 20.00         |
