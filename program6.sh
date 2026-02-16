@@ -1,3 +1,6 @@
+# Heading: Program to print Prime Numbers
+# Aim: To print all prime numbers up to a given limit
+
 # Clear terminal screen for clean output
 clear
 
@@ -68,6 +71,7 @@ done
 # Print a final newline for clean formatting
 echo
 
+# Output:
 # __________________________________________
 # | Enter the limit:                       |
 # | 10                                     |
