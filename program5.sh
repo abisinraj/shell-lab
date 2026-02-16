@@ -1,3 +1,6 @@
+# Heading: Program to Reverse a Number
+# Aim: To reverse a number using a while loop
+
 # Clear terminal screen for clean output
 clear
 
@@ -50,6 +53,7 @@ done
 # $rev contains the final reversed value
 echo "Reverse of the number is $rev"
 
+# Output:
 # __________________________________________
 # | Enter a number:                        |
 # | 12345                                  |
